@@ -1,61 +1,114 @@
 .home {
-
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
-
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .inverse-content {
-    padding-bottom: 30px;
+	.topheader {
+		width: 100%;
+    margin: 0 auto;
     border-bottom: 2px dashed @navigation-border;
-
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+    @media @mobile {
+      .mobile-columns();
+      margin-left: 5px;
+      
     }
+	}
+}
+.content-section {
+  
+	margin: 30px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media @mobile {
+		.mobile-columns()
+	}
 
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+	.text-content {
+		width: 48%;
+    padding-right: 1%;
+    @media @mobile{
+    .custom-mobile();
     }
-  }
+    
+	}
 
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
+	.img-content {
+		width: 48%;
+    padding-left: 1%;
+    @media @mobile {
+			.custom-mobile();
+    }
+		img {
       border-radius: 10px;
-    }
+      @media @mobile {
+        max-width: 100%;
+        height: auto;
+      }
+		}
+	}
+}
+
+.inverse-content {
+	padding-bottom: 30px;
+  border-bottom: 2px dashed @navigation-border;
+  @media @mobile{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+
   }
 
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+	.text-content {
+		padding-left: 1%;
+		padding-right: 0;
+	}
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
+	.img-content {
+		padding-right: 1%;
+    padding-left: 0;
+    @media @mobile {
+			.custom-mobile();
     }
-  }
-}// home
+	}
+}
+
+.content-destination {
+	width: 75%;
+	margin: 0 auto 30px;
+	@media @mobile {
+		.custom-mobile()
+	}
+	img {
+    border-radius: 10px;
+    @media @mobile {
+      max-width: 100%;
+      height: auto;
+    }
+	}
+}
+
+.content-pick {
+	padding-top: 30px;
+	border-top: 2px dashed @navigation-border;
+	display: flex;
+	justify-content: space-between;
+	@media @mobile {
+		.mobile-columns()
+	}
+
+	.destination {
+		width: 30%;
+		margin-bottom: 30px;
+		@media @mobile {
+			.custom-mobile();
+			h4 {
+				text-align: left;
+			}
+		}
+		.btn {
+			.custom-button(@button-bg);
+			@media @mobile {
+				width: 350px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+} // home
