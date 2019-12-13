@@ -175,33 +175,41 @@ header .navigation {
   border-bottom: 2px dashed #C0C0C0;
 }
 @media ( max-width: 500px ) {
-  header {
+  header .navigation {
     flex-direction: column;
     justify-content: center;
     align-content: center;
   }
 }
+header .logo h1 {
+  padding: 2rem;
+}
+@media ( max-width: 500px ) {
+  header .logo h1 {
+    text-align: center;
+  }
+}
 header nav {
   width: 50%;
+  margin-top: 1.5rem;
 }
 @media ( max-width: 500px ) {
   header nav {
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
   }
 }
 header nav a {
   text-decoration: none;
   color: #212529;
+  font-size: 1.5rem;
   padding: 2rem;
 }
 @media ( max-width: 500px ) {
   header nav a {
     width: 100%;
   }
-}
-header nav:hover {
-  text-decoration: underline;
-  color: #C0C0C0;
 }
 .footer {
   width: 100%;
@@ -215,9 +223,17 @@ header nav:hover {
   padding: 20px;
 }
 .home .topheader {
-  border-bottom: 2px dashed #C0C0C0;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  border-bottom: 2px dashed #C0C0C0;
+}
+@media ( max-width: 500px ) {
+  .home .topheader {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-left: 5px;
+  }
 }
 .content-section {
   margin: 30px 0;
@@ -227,8 +243,8 @@ header nav:hover {
 }
 @media ( max-width: 500px ) {
   .content-section {
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-content: center;
   }
 }
@@ -247,8 +263,21 @@ header nav:hover {
   width: 48%;
   padding-left: 1%;
 }
+@media ( max-width: 500px ) {
+  .content-section .img-content {
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+  }
+}
 .content-section .img-content img {
   border-radius: 10px;
+}
+@media ( max-width: 500px ) {
+  .content-section .img-content img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 .inverse-content {
   padding-bottom: 30px;
@@ -270,6 +299,13 @@ header nav:hover {
   padding-right: 1%;
   padding-left: 0;
 }
+@media ( max-width: 500px ) {
+  .inverse-content .img-content {
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+  }
+}
 .content-destination {
   width: 75%;
   margin: 0 auto 30px;
@@ -283,6 +319,12 @@ header nav:hover {
 }
 .content-destination img {
   border-radius: 10px;
+}
+@media ( max-width: 500px ) {
+  .content-destination img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 .content-pick {
   padding-top: 30px;

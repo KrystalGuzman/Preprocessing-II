@@ -12,8 +12,13 @@
     color:@font-color;
     padding: 1%;
   }
-  .custom-mobile(){
+  .custom-mobile(@width:90%){
     margin: 0 auto;
-    width: 90%;
+    width: @width;
     text-align: left;
   }
+.mobile-columns(){
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
